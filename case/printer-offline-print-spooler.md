@@ -21,7 +21,7 @@
 2. **Queue Analysis:** Checked the local print queue and identified a stuck 200MB PDF document that had been pending for several hours.
 3. **Service Diagnostics:** Attempted to cancel the stuck document, but the print queue was unresponsive.
 4. **Service Restart:** Opened `services.msc` and restarted the **Print Spooler** service to clear the application hang.
-5. **Configuration Check:** Verified that the printer port was correctly configured to the standard TCP/IP address and had not reverted to a WSD port.
+5. **Configuration Check:** Verified that the printer port was correctly configured to the standard TCP/IP address.
 6. **Printer Re-installation:** Removed the local instance of the printer and re-added it from the corporate print server to ensure a fresh connection and driver initialization.
 
 ## Root Cause
