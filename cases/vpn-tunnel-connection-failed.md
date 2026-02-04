@@ -6,7 +6,7 @@
 ---
 
 ## Environment
-* OS: Windows 10/11 Laptop
+* OS: Windows 11 Laptop
 * Software: Cisco AnyConnect VPN Client
 * Connection Type: Public Wi-Fi
 
