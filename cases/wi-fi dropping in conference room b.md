@@ -31,11 +31,6 @@
 * **Result:** Requested a physical inspection and signal strength analysis (Heat Map) for Conference Room B to determine if the AP requires replacement or reconfiguration.
 * **Interim:** Advised user of the escalation and suggested alternative workspaces until the network team confirms a fix.
 
-## Verification
-- [x] Issue successfully reproduced in Conference Room B.
-- [x] Wireless stability confirmed outside of the affected area.
-- [x] Escalation performed with detailed diagnostic logs and location data.
-
 ---
 
 ## Skills Demonstrated
