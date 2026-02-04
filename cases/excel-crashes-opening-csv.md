@@ -1,64 +1,43 @@
+# Case Study: Excel Crashes When Opening CSV Files
 
-Case Study: Excel Crashes When Opening CSV Files
-Issue
+## Incident Summary
+**User Report:** User reported that Microsoft Excel crashes immediately whenever they attempt to open any .csv file. 
 
-User reports that Microsoft Excel crashes when attempting to open .csv files.
+---
 
-Environment
+## Environment
+* OS: Windows 10/11
+* Software: Microsoft Excel (Microsoft 365 Desktop App)
 
-Windows 10/11
+## Symptoms
+* Excel crashes immediately upon opening .csv files.
+* The issue is consistent across multiple different CSV files.
+* Web-based Office apps and other desktop Office apps (Word, Outlook) are unaffected.
 
-Microsoft Excel (Microsoft 365 desktop app)
+## Troubleshooting Steps
+1. **Initial Verification:** Contacted the user and screenshared to confirm the crash. Verified that the issue was isolated to the desktop version of Excel.
+2. **Service Check:** Checked the ServiceNow outage board; confirmed no active Microsoft 365 service-wide issues.
+3. **Safe Mode:** Launched Excel in Safe Mode (excel /safe) to rule out third-party add-ins. The issue persisted, suggesting a core application fault rather than a plugin conflict.
+4. **Diagnostic:** Identified that the crash behavior pointed toward corrupted Office application components or DLLs.
 
-Symptoms
+## Root Cause
+**Corrupted Microsoft Office application components.** A specific set of libraries used for file parsing was failing, causing the application to terminate unexpectedly during the file-open process.
 
-Excel crashes immediately when opening CSV files
+## Resolution
+* **Action:** Performed a Microsoft Office 365 Quick Repair via the Control Panel (Apps & Features).
+* **Result:** After the repair finished, Excel was able to open the CSV files successfully without crashing.
+* **Confirmation:** User tested several files and confirmed the application is functioning normally.
 
-Issue occurs with multiple CSV files
+## Verification
+- [x] CSV files open successfully.
+- [x] Excel no longer crashes on launch.
+- [x] User confirmed resolution.
 
-Web apps and other Office apps unaffected
+---
 
-Troubleshooting Steps
-
-Contacted user and confirmed Excel crashes when opening CSV files
-
-Verified issue occurs with multiple CSV files and is isolated to desktop Excel
-
-Checked ServiceNow outage board and confirmed no Microsoft 365 service issues
-
-Launched Excel in Safe Mode to rule out add-ins (issue persisted)
-
-Identified likely corrupted Office application components
-
-Performed Microsoft Office 365 Quick Repair
-
-Root Cause
-
-Corrupted Microsoft Office application components causing Excel to crash on file open.
-
-Resolution
-
-Ran Microsoft Office 365 Quick Repair to restore corrupted application components.
-Retested by opening CSV file successfully without crashing.
-User confirmed Excel is functioning normally.
-
-Verification
-
-CSV file opens successfully
-
-Excel no longer crashes
-
-User confirmed resolution
-
-Skills Demonstrated
-
-Application troubleshooting
-
-Microsoft Office 365 support
-
-Isolation and root cause analysis
-
-User communication
-
-Technical documentation
-
+## Skills Demonstrated
+* Application Troubleshooting
+* Microsoft Office 365 Support
+* Isolation and Root Cause Analysis (RCA)
+* User Communication
+* Technical Documentation
